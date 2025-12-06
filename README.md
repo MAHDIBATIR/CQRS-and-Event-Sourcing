@@ -2,7 +2,7 @@
 
 This project demonstrates a **Bank Account Management** microservice architecture implementing **Event Sourcing** and **CQRS** (Command Query Responsibility Segregation) patterns using the **Axon Framework** and **Spring Boot**.
 
-## 🚀 Overview
+## Overview
 
 The application is designed to separate the **Write Model** (Commands) from the **Read Model** (Queries), ensuring scalability and flexibility.
 
@@ -10,7 +10,7 @@ The application is designed to separate the **Write Model** (Commands) from the 
 -   **Query Side**: Listens to events and updates a relational database (Projections) for efficient querying.
 -   **Real-time Updates**: Uses Server-Sent Events (SSE) to push account updates to clients in real-time.
 
-## 🛠️ Technologies
+## Technologies
 
 -   **Java 17**
 -   **Spring Boot 3.2.2**
@@ -21,7 +21,7 @@ The application is designed to separate the **Write Model** (Commands) from the 
 -   **Lombok**
 -   **SpringDoc OpenAPI** (Swagger UI)
 
-## 🏗️ Architecture
+## Architecture
 
 ### Command Model (Write)
 -   **Aggregates**: `AccountAggregate`
@@ -33,7 +33,7 @@ The application is designed to separate the **Write Model** (Commands) from the 
 -   **Projections**: `AccountServiceHandler` updates the Read Database.
 -   **Queries**: `GetAccountQuery`, `GetAllAccountsQuery`
 
-## 🏃‍♂️ How to Run
+##  How to Run
 
 1.  **Clone the repository**:
     ```bash
@@ -61,7 +61,7 @@ The application is designed to separate the **Write Model** (Commands) from the 
     http://localhost:8082/h2-console
     ```
 
-## 📋 API Endpoints
+## API Endpoints
 
 ### Command Side (Write)
 -   `POST /commands/account/create` - Create new account
@@ -73,7 +73,7 @@ The application is designed to separate the **Write Model** (Commands) from the 
 -   `GET /query/accounts/byId/{id}` - Get account by ID
 -   `GET /query/accounts/watch/{id}` - Subscribe to real-time updates (SSE)
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 src/main/java/com/example/eventsourcingandcqrswithaxonandspringboot/
